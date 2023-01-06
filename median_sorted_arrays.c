@@ -1,4 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+#include <math.h>
+
+
 
 double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Size) {
     if (nums1Size > nums2Size) {
@@ -29,5 +34,34 @@ double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Si
         }
     }
 
-    return 0.0;
+    return 0;
+}
+
+int main(){
+    
+    
+    int nums1[] = {1, 3, 5, 7};
+    int nums2[] = {2, 4, 6, 8};
+    int nums1Size = sizeof(nums1) / sizeof(nums1[0]);
+    int nums2Size = sizeof(nums2) / sizeof(nums2[0]);
+    
+    int nums3[] = {1, 2, 3, 4};
+    int nums4[] = {5, 6, 7, 8, 9, 10};
+    int nums3Size = sizeof(nums3) / sizeof(nums3[0]);
+    int nums4Size = sizeof(nums4) / sizeof(nums4[0]);
+    
+    
+    
+    double median1 = findMedianSortedArrays(nums1, nums1Size, nums2, nums2Size);
+    printf("The median is: %f\n", median1);
+    
+    
+    double median2 = findMedianSortedArrays(nums3, nums3Size, nums4, nums4Size);
+    printf("The median is: %f\n", median2);
+    
+    
+    return 0;
+    
+    
+
 }
